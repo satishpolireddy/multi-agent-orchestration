@@ -1,4 +1,4 @@
-# ── Core LLM & Agent Framework ────────────────────────────────────────────────
+# ── Core LLM & Agent Framework ──────────────────────────────────────────────
 langchain>=0.3.0
 langchain-core>=0.3.0
 langchain-openai>=0.2.0
@@ -7,26 +7,34 @@ langgraph>=0.2.0
 llama-index>=0.11.0
 llama-index-core>=0.11.0
 
-# ── API Layer ───────────────────────────────────────────────────────────────────
+# ── API Layer ────────────────────────────────────────────────────────────────
 fastapi>=0.115.0
 uvicorn[standard]>=0.30.0
 pydantic>=2.9.0
 python-multipart>=0.0.12
 
-# ── Vector Store / Embeddings ──────────────────────────────────────────────
+# ── LlamaIndex bridges ───────────────────────────────────────────────────────
+llama-index-llms-langchain>=0.3.0   # LangChainLLM bridge for RAGPipeline
+llama-index-embeddings-openai>=0.2.0
+
+# ── Vector Store / Embeddings ────────────────────────────────────────────────
 faiss-cpu>=1.8.0
 tiktoken>=0.7.0
 
-# ── Tools & Integrations ───────────────────────────────────────────────
+# ── Tools & Integrations ────────────────────────────────────────────────────
 duckduckgo-search>=6.3.0       # WebSearchTool — no API key needed
-sqlalchemy:=2.0.0              # ORM for DatabaseTool (future Postgres support)
+sqlalchemy>=2.0.0              # ORM for DatabaseTool (future Postgres support)
+requests>=2.32.0               # Streamlit UI → API calls
 
-# ── Configuration & Utilities ──────────────────────────────────────────
+# ── Demo UI ──────────────────────────────────────────────────────────────────
+streamlit>=1.38.0
+
+# ── Configuration & Utilities ───────────────────────────────────────────────
 python-dotenv>=1.0.0
 httpx>=0.27.0
 tenacity>=9.0.0                # retry logic for LLM calls
 
-# ── Observability ──────────────────────────────────────────────────────────────
+# ── Observability ────────────────────────────────────────────────────────────
 structlog>=24.4.0
 prometheus-client>=0.21.0
 
