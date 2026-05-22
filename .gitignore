@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Testing & coverage
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# Data & secrets
+data/
+*.db
+*.sqlite
+*.sqlite3
+*.log
+
+# Docker
+.dockerignore
+
+# Terraform (Project 3)
+*.tfstate
+*.tfstate.backup
+.terraform/
